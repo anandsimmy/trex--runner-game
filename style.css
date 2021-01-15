@@ -1,0 +1,52 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+#container {
+    width: 800px;
+    height: 400px;
+    border: 2px solid #777;
+    position: relative;
+}
+
+#dino {
+    height: 120px;
+    width: 120px;
+    position: absolute;
+    top: 280px;
+}
+
+.jump {
+    animation: jump 1s infinite ease-out;
+}
+
+#cacti {
+    height: 70px;
+    width: 40px;
+    filter: brightness(0.7);
+    position: absolute;
+    bottom: 0px;
+    left: 760px;
+}
+
+.move {
+    animation: move 1600ms infinite linear;
+}
+
+@keyframes jump {
+    0% { top: 280px }
+    50% { top: 150px }
+    100% { top: 280px }
+}
+
+@keyframes move {
+    0% { left: 770px }
+    100% { left: -30px }
+}
